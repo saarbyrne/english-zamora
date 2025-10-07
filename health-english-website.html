@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English for Health Professionals - Jenni Molony</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #E62200;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      min-height: 100vh;
+      border: 12px solid white;
+    }
+    
+    .container {
+      max-width: 800px;
+      padding: 3rem 2rem;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .container::before {
+      content: "✚";
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.08;
+      top: 20%;
+      right: 5%;
+      color: white;
+      font-weight: 900;
+      z-index: 0;
+      line-height: 1;
+    }
+    
+    .container::after {
+      content: "✚";
+      position: absolute;
+      font-size: 180px;
+      opacity: 0.08;
+      top: 60%;
+      left: 5%;
+      color: white;
+      font-weight: 900;
+      z-index: 0;
+      line-height: 1;
+    }
+    
+    header {
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      font-size: 4.2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      text-shadow: 
+        -3px 3px 0px rgba(255, 100, 80, 0.8),
+        -6px 6px 0px rgba(255, 100, 80, 0.5),
+        -9px 9px 0px rgba(255, 100, 80, 0.3);
+      position: relative;
+    }
+    
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+      margin-top: 3rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 3rem;
+    }
+    
+    section:not(:last-child)::after {
+      content: "";
+      display: block;
+      margin-top: 3rem;
+      height: 0.5px;
+      background-color: white;
+      opacity: 0.5;
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .text-secondary {
+      opacity: 0.85;
+      font-size: 1.2rem;
+    }
+    
+    .intro {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+    
+    .credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      position: relative;
+    }
+    
+    .credentials::before {
+      content: "✚";
+      position: absolute;
+      font-size: 140px;
+      opacity: 0.07;
+      top: 50%;
+      right: -10%;
+      color: white;
+      font-weight: 900;
+      z-index: 0;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+    
+    .credential {
+      margin-bottom: 0.5rem;
+    }
+    
+    .credential-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    
+    .credential-subtitle {
+      opacity: 0.85;
+      font-size: 1.2rem;
+    }
+    
+    .experience {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+      line-height: 1.7;
+    }
+    
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      position: relative;
+    }
+    
+    ul::before {
+      content: "✚";
+      position: absolute;
+      font-size: 160px;
+      opacity: 0.07;
+      top: 50%;
+      left: -15%;
+      color: white;
+      font-weight: 900;
+      z-index: 0;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+    
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1.35rem;
+      line-height: 1.6;
+    }
+    
+    li::before {
+      content: "•";
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-top: -0.15rem;
+    }
+    
+    .location-section {
+      margin-top: 3rem;
+    }
+    
+    .location-title {
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+    
+    .location-subtitle {
+      opacity: 0.85;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .contact {
+      margin-top: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+    
+    .email-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    
+    a {
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    
+    a:hover {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+      
+      h2 {
+        font-size: 2.1rem;
+      }
+      
+      .location-title {
+        font-size: 2.1rem;
+      }
+      
+      .container {
+        padding: 2rem 1.5rem;
+      }
+      
+      .intro, li, .contact-item {
+        font-size: 1.26rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .location-title {
+        font-size: 1.8rem;
+      }
+      
+      .subtitle {
+        font-size: 1.32rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ENGLISH FOR HEALTH PROFESSIONALS</h1>
+      <p class="subtitle">Nursing · Medicine · Nutrition & Dietetics · Physiotherapy</p>
+      <p class="text-secondary">(Enfermería · Medicina · Nutrición y Dietética · Fisioterapia)</p>
+    </header>
+
+    <section>
+      <p class="intro">Improve your English for hospitals, clinics, and healthcare communication.</p>
+      <p class="text-secondary">Mejora tu inglés para comunicarte con seguridad en entornos clínicos y hospitalarios.</p>
+    </section>
+
+    <section>
+      <h2>Teacher / Profesora: Jenni Molony</h2>
+      <p class="intro">Native Irish English speaker (y habla español)</p>
+
+      <div class="credentials">
+        <div class="credential">
+          <p class="credential-title">BSc (Hons) General Nursing — Trinity College Dublin</p>
+          <p class="credential-subtitle">(Grado con Honores en Enfermería General — Trinity College Dublin)</p>
+        </div>
+
+        <div class="credential">
+          <p class="credential-title">Postgraduate Diploma in Public Health Nursing — University College Dublin</p>
+          <p class="credential-subtitle">(Posgrado en Enfermería de Salud Pública — UCD)</p>
+        </div>
+
+        <div class="credential">
+          <p class="credential-title">MSc Food, Nutrition & Health — University College Dublin (First Class Honours)</p>
+          <p class="credential-subtitle">(Máster en Alimentación, Nutrición y Salud — UCD, con honores)</p>
+        </div>
+      </div>
+
+      <p class="experience">Extensive hospital, clinic, community care (atención comunitaria), and public-health experience in Ireland and Australia.</p>
+    </section>
+
+    <section>
+      <h2>WHAT YOU GAIN / LO QUE LOGRARÁS</h2>
+      <ul>
+        <li>English for hospitals, wards, and patient care</li>
+        <li>Understanding medical vocabulary and documentation</li>
+        <li>Communication skills with patients, families, and colleagues</li>
+        <li>CV, cover letter & interview preparation for international health work</li>
+      </ul>
+    </section>
+
+    <section class="location-section">
+      <h2 class="location-title">ZAMORA (presencial) & SALAMANCA · ONLINE</h2>
+      <p class="location-subtitle">(Clases también en español)</p>
+
+      <div class="contact">
+        <div class="contact-item">
+          <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 7l10 7 10-7"/>
+          </svg>
+          <a href="mailto:Jenni.NoShNutrition@outlook.com">Jenni.NoShNutrition@outlook.com</a>
+        </div>
+        <p style="font-size: 1.125rem;">Website: coming soon</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
